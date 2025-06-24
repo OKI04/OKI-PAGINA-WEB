@@ -18,7 +18,7 @@ export async function loadProducts() {
       return;
     }
 
-    const baseApiUrl = "http://localhost:3900";
+    const baseApiUrl = "https://backend-oki-web.onrender.com";
     const productos = await res.json();
 
     productosCargados = productos.map(prod => {
