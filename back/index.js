@@ -13,7 +13,7 @@ connection();
 
 //Servidor
 const app = express();
-const port = 3900;
+const port = process.env.PORT || 3900;
 
 //Middlewares
 app.use(cors()); //Configurar CORS
