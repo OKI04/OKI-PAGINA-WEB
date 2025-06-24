@@ -1129,22 +1129,18 @@ function agregarItem(containerId, templateFunction) {
   }
 }
 
-
-function mostrarAlerta(mensaje, tiempo = 3000) {
+export function mostrarAlerta(mensaje, tiempo = 3000) {
   const modal = document.getElementById("alertModal");
   const mensajeElem = document.getElementById("alertMessage");
   mensajeElem.textContent = mensaje;
   modal.style.display = "flex";
 
-  // Cierra automáticamente si se especifica tiempo
   if (tiempo > 0) {
-    setTimeout(() => {
-      cerrarAlerta();
-    }, tiempo);
+    setTimeout(() => cerrarAlerta(), tiempo);
   }
 }
 
-function cerrarAlerta() {
+export function cerrarAlerta() {
   const modal = document.getElementById("alertModal");
   modal.style.display = "none";
 }
